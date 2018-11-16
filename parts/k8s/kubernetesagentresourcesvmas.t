@@ -206,12 +206,13 @@
         },
         "osProfile": {
           "adminUsername": "[parameters('linuxAdminUsername')]",
+          "adminPassword": "[parameters('linuxAdminPassword')]",
           "computername": "[concat(variables('{{.Name}}VMNamePrefix'), copyIndex(variables('{{.Name}}Offset')))]",
           {{if not IsOpenShift}}
           {{GetKubernetesAgentCustomData .}}
           {{end}}
           "linuxConfiguration": {
-              "disablePasswordAuthentication": "true",
+              "disablePasswordAuthentication": "false",
               "ssh": {
                 "publicKeys": [
                   {

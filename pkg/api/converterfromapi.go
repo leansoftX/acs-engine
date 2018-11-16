@@ -548,6 +548,8 @@ func convertLinuxProfileToV20170701(api *LinuxProfile, obj *v20170701.LinuxProfi
 
 func convertLinuxProfileToVLabs(obj *LinuxProfile, vlabsProfile *vlabs.LinuxProfile) {
 	vlabsProfile.AdminUsername = obj.AdminUsername
+	vlabsProfile.AdminPassword = obj.AdminPassword
+	//vlabsProfile.DisablePasswordAuthentication = obj.DisablePasswordAuthentication
 	vlabsProfile.SSH.PublicKeys = []vlabs.PublicKey{}
 	for _, d := range obj.SSH.PublicKeys {
 		vlabsProfile.SSH.PublicKeys = append(vlabsProfile.SSH.PublicKeys,

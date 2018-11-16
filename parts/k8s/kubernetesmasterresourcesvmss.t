@@ -389,10 +389,11 @@
         },
         "osProfile": {
           "adminUsername": "[parameters('linuxAdminUsername')]",
+          "adminPassword": "[parameters('linuxAdminPassword')]",
           "computerNamePrefix": "[concat(variables('masterVMNamePrefix'), 'vmss')]",
           {{GetKubernetesMasterCustomData .}}
           "linuxConfiguration": {
-              "disablePasswordAuthentication": "true",
+              "disablePasswordAuthentication": "false",
               "ssh": {
                 "publicKeys": [
                   {

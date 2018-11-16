@@ -477,6 +477,8 @@ func convertV20170701LinuxProfile(v20170701 *v20170701.LinuxProfile, api *LinuxP
 
 func convertVLabsLinuxProfile(vlabs *vlabs.LinuxProfile, api *LinuxProfile) {
 	api.AdminUsername = vlabs.AdminUsername
+	api.AdminPassword = vlabs.AdminPassword
+	//api.DisablePasswordAuthentication = vlabs.DisablePasswordAuthentication
 	api.SSH.PublicKeys = []PublicKey{}
 	for _, d := range vlabs.SSH.PublicKeys {
 		api.SSH.PublicKeys = append(api.SSH.PublicKeys,

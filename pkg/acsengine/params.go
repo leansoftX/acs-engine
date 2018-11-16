@@ -39,6 +39,8 @@ func getParameters(cs *api.ContainerService, generatorCode string, acsengineVers
 	addValue(parametersMap, "fqdnEndpointSuffix", cloudSpecConfig.EndpointConfig.ResourceManagerVMDNSSuffix)
 	addValue(parametersMap, "targetEnvironment", helpers.GetCloudTargetEnv(cs.Location))
 	addValue(parametersMap, "linuxAdminUsername", properties.LinuxProfile.AdminUsername)
+	addValue(parametersMap, "linuxAdminPassword", properties.LinuxProfile.AdminPassword)
+	//addValue(parametersMap, "disablePasswordAuthentication", properties.LinuxProfile.DisablePasswordAuthentication)
 	if properties.LinuxProfile.CustomSearchDomain != nil {
 		addValue(parametersMap, "searchDomainName", properties.LinuxProfile.CustomSearchDomain.Name)
 		addValue(parametersMap, "searchDomainRealmUser", properties.LinuxProfile.CustomSearchDomain.RealmUser)

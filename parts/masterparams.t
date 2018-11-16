@@ -4,6 +4,12 @@
       },
       "type": "string"
     },
+    "linuxAdminPassword": {
+      "metadata": {
+        "description": "Password for the Linux Virtual Machines (SSH or Password)."
+      },
+      "type": "string"
+    },
     "masterEndpointDNSNamePrefix": {
       "metadata": {
         "description": "Sets the Domain name label for the master IP Address.  The concatenation of the domain name label and the regional DNS zone make up the fully qualified domain name associated with the public IP address."

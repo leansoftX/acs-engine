@@ -24,6 +24,7 @@
     ],
     "linuxProfile": {
       "adminUsername": "azureuser",
+      "adminPassword": "P2ssw0rd",
       "ssh": {
         "publicKeys": [
           {

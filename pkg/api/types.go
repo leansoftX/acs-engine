@@ -155,7 +155,9 @@ type CertificateProfile struct {
 // LinuxProfile represents the linux parameters passed to the cluster
 type LinuxProfile struct {
 	AdminUsername string `json:"adminUsername"`
-	SSH           struct {
+	AdminPassword string `json:"adminPassword"`
+	//DisablePasswordAuthentication string `json:"disablePasswordAuthentication"`
+	SSH struct {
 		PublicKeys []PublicKey `json:"publicKeys"`
 	} `json:"ssh"`
 	Secrets               []KeyVaultSecrets   `json:"secrets,omitempty"`

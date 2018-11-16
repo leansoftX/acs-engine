@@ -824,12 +824,13 @@
         },
         "osProfile": {
           "adminUsername": "[parameters('linuxAdminUsername')]",
+          "adminPassword": "[parameters('linuxAdminPassword')]",
           "computername": "[concat(variables('masterVMNamePrefix'), copyIndex(variables('masterOffset')))]",
           {{if not IsOpenShift}}
           {{GetKubernetesMasterCustomData .}}
           {{end}}
           "linuxConfiguration": {
-            "disablePasswordAuthentication": true,
+            "disablePasswordAuthentication": false,
             "ssh": {
               "publicKeys": [
                 {

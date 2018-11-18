@@ -1,3 +1,11 @@
+    "masterLinuxAdminUsername": {
+      "type": "string",
+      "value": "[parameters('linuxAdminUsername')]"
+    },
+    "masterLinuxAdminPassword": {
+      "type": "string",
+      "value": "[parameters('linuxAdminPassword')]"
+    },
     "masterFQDN": {
       "type": "string",
 {{if not IsPrivateCluster}}

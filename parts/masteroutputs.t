@@ -6,6 +6,22 @@
       "type": "string",
       "value": "[parameters('linuxAdminPassword')]"
     },
+    "subscriptionId": {
+			"type": "string",
+			"value": "[subscription().subscriptionId]"
+		},
+    "rgLocation": {
+      "type": "string",
+			"value": "[parameters('location')]"
+    },
+    "rgName": {
+      "type": "string",
+      "value": "[variables('resourceGroup')]"
+    },
+    "masterVMName-0": {
+      "type": "string",
+      "value": "[concat(variables('masterVMNamePrefix'), '0')]"
+    },
     "masterFQDN": {
       "type": "string",
 {{if not IsPrivateCluster}}
